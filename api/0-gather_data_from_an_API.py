@@ -21,7 +21,7 @@ class Get_Todo():
         user_json = user_result.json()
         todos_json = todos_result.json()
 
-        # Setting variables
+        # Setting variables for printing
         EMPLOYEE_NAME = user_json["name"]
         NUMBER_OF_DONE_TASKS = sum(1 for task in todos_json
                                    if str(task["userId"]) == user_id
