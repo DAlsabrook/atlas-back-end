@@ -34,7 +34,7 @@ class Get_Todo():
               ({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):")
         for task in todos_json:
             if str(task["userId"]) == user_id and task["completed"] is True:
-                print(f"\t{task['title']}")
+                print(f"\t {task['title']}")
 
 
 if __name__ == "__main__":
