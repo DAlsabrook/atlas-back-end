@@ -30,8 +30,8 @@ class Get_Todo():
                                     if str(task["userId"]) == user_id)
 
         # Printing employee info and task titles
-        print(f"Employee {EMPLOYEE_NAME} is done with tasks\
-              ({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):")
+        print(f"Employee {EMPLOYEE_NAME} is done with tasks"
+              f"({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):")
         for task in todos_json:
             if str(task["userId"]) == user_id and task["completed"] is True:
                 print(f"\t {task['title']}")
