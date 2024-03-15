@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module to import an api and export a csv file of user info
+Module to import an api and export a csv file of user info.
 """
 import csv
 import requests
