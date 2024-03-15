@@ -10,11 +10,11 @@ import sys
 args = sys.argv
 print(len(args))
 if len(args) == 2:
-    user_id = args[1]
+    user_id = int(args[1])
 url = "https://jsonplaceholder.typicode.com/"
 
 # Get api to json in a variable
-user_result = requests.get(url + "users/" + user_id)
+user_result = requests.get(url + "users/" + str(user_id))
 todos_result = requests.get(url + "todos")
 user_json = user_result.json()
 todos_json = todos_result.json()
@@ -22,7 +22,7 @@ todos_json = todos_result.json()
 # Get specific user information and task assigned to them
 username = user_json["username"]
 user_tasks_list = [task for task in todos_json
-                   if str(task["userId"]) == user_id]
+                   if task["userId"] == user_id]
 
 # Write specific user information to a csv file
 filename = f"{user_id}.csv"
