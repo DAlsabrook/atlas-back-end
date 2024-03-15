@@ -8,7 +8,8 @@ import sys
 
 # Get args from cmd line and set variables
 args = sys.argv
-user_id = args[1]
+if len(args) >= 1:
+    user_id = args[1]
 url = "https://jsonplaceholder.typicode.com/"
 
 # Get api to json in a variable
