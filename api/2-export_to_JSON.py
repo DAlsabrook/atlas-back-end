@@ -2,9 +2,9 @@
 """
 First module to work with flask api apps
 """
+import json
 import requests
 import sys
-import json
 
 
 class Get_Todo():
