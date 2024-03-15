@@ -21,7 +21,8 @@ todos_json = todos_result.json()
 
 # Get specific user information and task assigned to them
 username = user_json["username"]
-user_tasks_list = [task for task in todos_json if str(task["userId"]) == user_id]
+user_tasks_list = [task for task in todos_json
+                   if str(task["userId"]) == user_id]
 
 # Write specific user information to a csv file
 filename = f"{user_id}.csv"
